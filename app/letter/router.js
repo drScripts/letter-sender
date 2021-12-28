@@ -21,7 +21,7 @@ router.post("/", async (req, res) => {
             await updateStatus(data._id);
         }
     }
-    res.redirect("/");
+    res.redirect("/letter");
   } else {
     res.redirect("/letter");
   } 
