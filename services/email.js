@@ -13,7 +13,7 @@ const sendData = async (data) => {
         from: data.subject + ' <noreply@mailers.com>',
         to:data.recipient,
         subject:data.subject,
-        text:"http://localhost:3000",
+        text:"https://letter-mailers.herokuapp.com/",
         html:template(data._id,data.to,data.sender)
     }).catch(e => {
         console.log(e);
@@ -196,7 +196,7 @@ const template = (id,name,sendder) => {
                       <td valign="top" align="center" style="padding:0;Margin:0;width:540px"> 
                        <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                          <tr style="border-collapse:collapse"> 
-                          <td align="center" style="padding:30px;Margin:0"><span class="es-button-border" style="border-style:solid;border-color:transparent;background:none 0% 0% repeat scroll #fff5e3;border-width:0px;display:inline-block;border-radius:34px;width:auto"><a href="http://localhost:3000/${id}" class="es-button es-button-1" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#EA3500;font-size:18px;border-style:solid;border-color:#fff5e3;border-width:10px 20px 5px;display:inline-block;background:none 0% 0% repeat scroll #fff5e3;border-radius:34px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Read The Letter</a></span></td> 
+                          <td align="center" style="padding:30px;Margin:0"><span class="es-button-border" style="border-style:solid;border-color:transparent;background:none 0% 0% repeat scroll #fff5e3;border-width:0px;display:inline-block;border-radius:34px;width:auto"><a href="https://letter-mailers.herokuapp.com/${id}" class="es-button es-button-1" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#EA3500;font-size:18px;border-style:solid;border-color:#fff5e3;border-width:10px 20px 5px;display:inline-block;background:none 0% 0% repeat scroll #fff5e3;border-radius:34px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Read The Letter</a></span></td> 
                          </tr> 
                        </table></td> 
                      </tr> 
@@ -241,7 +241,7 @@ const template = (id,name,sendder) => {
                       <td align="left" style="padding:0;Margin:0;width:270px"> 
                        <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px"> 
                          <tr style="border-collapse:collapse"> 
-                          <td align="center" style="padding:30px;Margin:0"><span class="es-button-border" style="border-style:solid;border-color:transparent;background:#fff5e3;border-width:0px;display:inline-block;border-radius:20px;width:auto"><a href="http://localhost:3000/letter" class="es-button es-button-2" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#EA3500;font-size:18px;border-style:solid;border-color:#fff5e3;border-width:10px 20px;display:inline-block;background:#fff5e3;border-radius:20px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Send Your Own Letter</a></span></td> 
+                          <td align="center" style="padding:30px;Margin:0"><span class="es-button-border" style="border-style:solid;border-color:transparent;background:#fff5e3;border-width:0px;display:inline-block;border-radius:20px;width:auto"><a href="https://letter-mailers.herokuapp.com/letter" class="es-button es-button-2" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#EA3500;font-size:18px;border-style:solid;border-color:#fff5e3;border-width:10px 20px;display:inline-block;background:#fff5e3;border-radius:20px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:22px;width:auto;text-align:center">Send Your Own Letter</a></span></td> 
                          </tr> 
                        </table></td> 
                      </tr> 
