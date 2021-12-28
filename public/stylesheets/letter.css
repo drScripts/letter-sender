@@ -1,0 +1,18 @@
+body {
+  background-color: #3b4049;
+}
+
+.area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.area textarea {
+  flex: 25;
+}
+
+.area button {
+  flex: 0.5;
+  margin-left: 20px;
+}
