@@ -15,8 +15,8 @@ router.post("/", async (req, res) => {
   const date = moment(body.date ?? Date.now()).format("MM-DD-Y");
   const data = await addData(body);
   if (data) {
-    if (body.date != null && body.date != undefined) {
-        if(today === date){
+    if (date != null && date != undefined) {
+        if(today === date){ 
             await sendData(data);
             await updateStatus(data._id);
         }
