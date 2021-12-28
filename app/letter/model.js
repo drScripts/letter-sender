@@ -80,4 +80,4 @@ const findById = async (id) => {
 };
  
 
-module.exports = { addData, updateStatus, findById, getNow };
+module.exports = { addData, updateStatus, findById };
