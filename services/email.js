@@ -1,10 +1,11 @@
 const mailer = require("nodemailer")
+const config = require("../config")
 
 const transporter = mailer.createTransport({
     service:'SendinBlue',
     auth:{
-        user:"nathanael.vd@gmail.com",
-        pass:"msW8Bj5d0J64AOZV", 
+        user:config.sendinBlueUser,
+        pass:config.sendinBluePass, 
     }
 })
 
