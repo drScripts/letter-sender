@@ -51,7 +51,7 @@ const addData = async (data) => {
     to: data.to,
     subject: data.subject,
     footer: data.footer,
-    sendOn: data.date ?? Date.now(),
+    sendOn: data.date ?? moment().format("MM-DD-Y"),
     paragraphs: data.letters,
   });
 
