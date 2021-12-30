@@ -5,9 +5,9 @@ $(window).resize(function () {
   width = $(window).width() * 0.85;
   height = $(window).height() * 0.9;
   $("#letter").css({
-    width:width,
-    "max-height":height,
-  })
+    width: width,
+    "max-height": height,
+  });
 });
 
 $("#letter").click(function () {
@@ -53,7 +53,7 @@ function created() {
 
   new Typed(".date-create", {
     strings: [text],
-    typeSpeed: 50,
+    typeSpeed: 40,
     onComplete: (self) => {
       $(".typed-cursor").hide();
       greatingText();
@@ -66,7 +66,7 @@ function greatingText() {
 
   new Typed(".greating", {
     strings: [text],
-    typeSpeed: 50,
+    typeSpeed: 40,
     onComplete: (self) => {
       $(".typed-cursor").hide();
       paragraph();
@@ -74,19 +74,28 @@ function greatingText() {
   });
 }
 
+let els = $(".paragraph p");
+let indexs = 0;
 function paragraph() {
-  let els = $(".paragraph p");
-  for (let index = 0; index < els.length; index++) {
-    const text = $(els[index]).attr("data-text");
-    new Typed(els[index], {
-      strings: [text],
-      typeSpeed: 50,
-      onComplete: (self) => {
-        $(".typed-cursor").hide();
+  const text = $(els[indexs]).attr("data-text");
+
+  typed(indexs, text);
+}
+
+function typed(index, text) {
+  new Typed(els[index], {
+    strings: [text],
+    typeSpeed: 40,
+    onComplete: (self) => {
+      $(".typed-cursor").hide();
+      indexs++;
+      if (indexs >= els.length) {
         footer();
-      },
-    });
-  }
+      } else {
+        paragraph();
+      }
+    },
+  });
 }
 
 function footer() {
@@ -95,7 +104,7 @@ function footer() {
 
   new Typed("#footer-greet", {
     strings: [text],
-    typeSpeed: 50,
+    typeSpeed: 40,
     onComplete: (self) => {
       $(".typed-cursor").hide();
     },
